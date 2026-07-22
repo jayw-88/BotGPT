@@ -17,9 +17,7 @@ if "system_instruction_change" not in st.session_state:
     )
 if "console_output" not in st.session_state:
     st.session_state.console_output = [
-        "Welcome to BotGPT!",
         "Press 'M' to manage chats, 'S' for settings, and 'Q' to quit.",
-        "\nHow may BotGPT help you today?",
     ]
 
 # Title
