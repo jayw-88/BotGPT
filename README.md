@@ -1,11 +1,12 @@
-# bot-gpt
-A small project I made hosted on Streamlit to run an AI using Groq API.
+# BotGPT
 
-## How to Run Application
-Use this link: https://bot-gpt-x.streamlit.app
+A lightweight AI application hosted on Streamlit, powered by the Groq API (not to be confused with Grok).
+
+## Access the Web App
+
+Access the live application directly:
+[BotGPT on Streamlit](https://bot-gpt-x.streamlit.app)
 
 ## Disclaimer
-Please do not abuse this AI in any way. Only use it to assist you for educational purposes, not to destroy the purpose of education.
 
-
-
+AI can make mistakes. Always verify important information.
