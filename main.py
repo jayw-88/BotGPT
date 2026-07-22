@@ -7,7 +7,7 @@ from groq import Groq
 client = Groq(api_key = os.environ["GROQ_API_KEY"])
 
 # page config
-st.set_page_config(page_title="bot-gpt")
+st.set_page_config(page_title="BotGPT")
 
 if 'chats' not in st.session_state:
     st.session_state.chats = []
@@ -19,7 +19,7 @@ if 'disclaimer_finish' not in st.session_state:
     st.session_state.disclaimer_finish = False
 
 # Title
-st.title("bot-gpt")
+st.title("BotGPT")
 
 # DISCLAIMER SCREEN
 if not st.session_state.disclaimer_finish:
@@ -33,13 +33,12 @@ if not st.session_state.disclaimer_finish:
     if submit_button_dis and user_input_dis:
         if user_input_dis == "I solemnly swear that I will abide by these rules":
             st.session_state.disclaimer_finish = True
-            st.session_state.console_output.append("Accepted! Starting schbot...")
-            time.sleep(.5)
+            st.session_state.console_output.append("Accepted! Starting BotGPT...")
             st.session_state.console_output = []
-            st.session_state.console_output.append("Welcome to schbot!")
+            st.session_state.console_output.append("Welcome to BotGPT!")
             st.session_state.console_output.append("Press 'M' to manage chats, 'S' for settings, and 'Q' to quit.")
             time.sleep(.5)
-            st.session_state.console_output.append("\nHow may schbot help you today?")
+            st.session_state.console_output.append("\nHow may BotGPT help you today?")
             st.rerun()
         else:
             st.error("Please type the exact statement: 'I solemnly swear that I will abide by these rules'")
@@ -56,8 +55,7 @@ else:
     if st.button("Clear Console"):
         st.session_state.console_output = []
         st.rerun()
-
-    
+        
     # Input area - ONLY SHOW AFTER DISCLAIMER
     if len(st.session_state.chats) != 0:
         prompt_text = "What would you like to do? \n(Ask Something, Manage Chats (M), Settings (S), Quit (Q))"
@@ -110,7 +108,7 @@ else:
         elif user_input.lower() == "s":
             time.sleep(.5)
             st.session_state.console_output.append("\nWelcome to Settings!")
-            st.session_state.console_output.append("Here you can give schbot certain instructions for his responses.\n Press 1 for a faster model and 2 for a more thorough model.")
+            st.session_state.console_output.append("Here you can give BotGPT certain instructions for his responses.\n Press 1 for a faster model and 2 for a more thorough model.")
             st.session_state.console_output.append("Input your settings or press 'X' to exit.")
             if st.button("1"):
                 st.session_sate.ai_model = "llama-3.1-8b-instant"
@@ -124,7 +122,7 @@ else:
         # Quit command (added missing)
         elif user_input.lower() == "q":
             time.sleep(.5)
-            st.session_state.console_output.append("\nThank you for using schbot!")
+            st.session_state.console_output.append("\nThank you for using BotGPT!")
 
         # Regular query
         else:
