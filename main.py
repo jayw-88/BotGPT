@@ -41,7 +41,7 @@ if len(st.session_state.chats) != 0:
         " Settings (S), Quit (Q))"
     )
 else:
-    prompt_text = "Type here:"
+    prompt_text = "Ask BotGPT"
 
 with st.form(key="input_form", clear_on_submit=True):
     user_input = st.text_input(prompt_text, key="user_input")
